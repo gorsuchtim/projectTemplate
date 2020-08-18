@@ -1,2 +1,2 @@
-# webpack_template_static
-A non-react/static version of the webpack template
+# webpack_template
+A template folder structure for a webpack build
