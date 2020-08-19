@@ -6,7 +6,7 @@
 
 export default (() => {
   const handleTemplate = () => {
-    console.log("Im the component template");
+    console.log("Im eat cheese");
   };
   const initialize = () => {
     handleTemplate();

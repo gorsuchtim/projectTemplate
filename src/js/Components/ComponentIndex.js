@@ -11,7 +11,8 @@ const ComponentIndex = () => {
   // Enter as strings ".component-template": "ComponentTemplate"
   const asyncModules = {
     ".component-template": "ComponentTemplate",
-    "[data-fade-target]": "fade-in-out"
+    "[data-fade-target]": "fade-in-out",
+    ".show-more": "show-more"
   };
   const loadModules = async () => {
     const imports = Object.entries(asyncModules);

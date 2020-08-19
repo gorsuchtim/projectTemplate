@@ -2,7 +2,7 @@
 
 const Util = {
   addEvents(element, eventType, fn, ...args) {
-    element.addEventListener(eventType, function () {
+    element.addEventListener(eventType, function() {
       fn(args);
     });
   },
@@ -93,7 +93,7 @@ const Util = {
       el.setAttribute(key, attrs[key]);
     }
     return el;
-  },
+  }
 };
 
 export default Util;
