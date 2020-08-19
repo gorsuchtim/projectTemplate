@@ -1,4 +1,4 @@
-@import "variables";
-@import "./mixins/mixins";
-@import "baseStyles";
-@import "./helpers/helpers";
+@import "./variables/variables";
+@import "./base/baseStyles";
+@import "./mixins/index-mixins";
+@import "./helpers/index-helpers.scss";
