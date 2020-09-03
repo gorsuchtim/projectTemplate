@@ -1,9 +1,0 @@
-$spacer-options: 0, 16, 24, 32, 48, 64, 80, 120;
-
-@each $spacing in $spacer-options {
-  $size: $spacing / 2;
-
-  .spacer-#{$spacing} {
-    padding: #{$size}px;
-  }
-}
