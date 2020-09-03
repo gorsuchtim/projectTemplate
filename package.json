@@ -6,10 +6,12 @@
   "scripts": {
     "build": "npm run clean && npm run format && webpack --config webpack.production.js",
     "clean": "rimraf dist",
-    "dev": "webpack-dev-server --config webpack.development.js --open",
+    "dev": "npm run dev:tailwind && webpack-dev-server --config webpack.development.js --open",
+    "dev:tailwind": "npx tailwindcss build src/css/tailwind.css -o src/scss/tailwind/_tailwind.scss",
     "format": "npm run lint && npm run prettier",
     "lint": "eslint \"src/**/*.{js,jsx}\"",
-    "prettier": "prettier --write \"src/**/*.{html,htm,css,scss,json,js,jsx}\" --write"
+    "prettier": "prettier --write \"src/**/*.{html,htm,css,scss,json,js,jsx}\" --write",
+    "start": "npm run dev"
   },
   "repository": {
     "type": "git",
@@ -60,6 +62,7 @@
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.11.0",
     "@babel/runtime": "^7.11.2",
+    "clean-css": "^4.2.3",
     "node-sass": "^4.14.1",
     "tailwindcss": "^1.7.6"
   }

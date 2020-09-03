@@ -6,19 +6,27 @@ module.exports = merge(common, {
   devtool: "source-map",
   mode: "development",
   output: {
-    filename: "App.dev.js",
+    filename: "App.dev.js"
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/html/index.html",
-    }),
+      template: "./src/html/index.html"
+    })
   ],
   module: {
     rules: [
       {
         test: /\.scss$/,
-        use: ["style-loader", "css-loader?sourceMap", "sass-loader"],
+        use: ["style-loader", "css-loader?sourceMap", "sass-loader"]
       },
-    ],
-  },
+      {
+        test: /\.css$/,
+        use: [
+          "style-loader",
+          { loader: "css-loader", options: { importLoaders: 1 } },
+          "postcss-loader"
+        ]
+      }
+    ]
+  }
 });
