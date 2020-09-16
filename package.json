@@ -1,13 +1,12 @@
 {
-  "name": "webpack_template",
+  "name": "projecttemplate",
   "version": "1.0.0",
   "description": "A template build structure for a webpack build",
   "main": "index.js",
   "scripts": {
-    "build": "npm run clean && npm run format && webpack --config webpack.production.js",
+    "build": "npm run clean && npm run lint && webpack --config webpack.production.js",
     "clean": "rimraf dist",
-    "dev": "npm run dev:tailwind && webpack-dev-server --config webpack.development.js --open",
-    "dev:tailwind": "npx tailwindcss build src/css/tailwind.css -o src/scss/tailwind/_tailwind.scss",
+    "dev": "webpack-dev-server --config webpack.development.js --open",
     "format": "npm run lint && npm run prettier",
     "lint": "eslint \"src/**/*.{js,jsx}\"",
     "prettier": "prettier --write \"src/**/*.{html,htm,css,scss,json,js,jsx}\" --write",
@@ -15,15 +14,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gorsuchtim/webpack_template.git"
+    "url": "git+https://github.com/gorsuchtim/projectTemplate.git"
   },
   "keywords": [],
   "author": "Tim Gorsuch",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gorsuchtim/webpack_template/issues"
+    "url": "https://github.com/gorsuchtim/projectTemplate/issues"
   },
-  "homepage": "https://github.com/gorsuchtim/webpack_template#readme",
+  "homepage": "https://github.com/gorsuchtim/projectTemplate#readme",
   "devDependencies": {
     "@babel/core": "^7.11.0",
     "@babel/plugin-transform-shorthand-properties": "^7.10.4",
