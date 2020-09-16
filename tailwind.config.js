@@ -17,8 +17,8 @@ module.exports = {
       orange: "#ffa53c",
       teal: "#05d4e1",
 
-      "blue--primary": "#20e4ff",
-      "pink--primary": "#e33cc7"
+      "blue-primary": "#20e4ff",
+      "pink-primary": "#e33cc7"
     },
     spacing: {
       full: "100%",
