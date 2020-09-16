@@ -4,7 +4,7 @@ module.exports = {
     screens: {
       sm: "460px",
       md: "768px",
-      lg: "1280px",
+      lg: "1280px"
     },
     colors: {
       transparent: "transparent",
@@ -17,27 +17,8 @@ module.exports = {
       orange: "#ffa53c",
       teal: "#05d4e1",
 
-      "blue-bg-pale": "#edf6ff",
-      "blue-info": "#edf6ff",
-      "blue-vivid": "#0a80ff",
-      "blue-vivid-hover": "#0066d4",
-
-      "gray-bg-light": "#f2f7f7",
-      "gray-bg-md": "#ebf0f0",
-      "gray-bg-dark": "#e3e8e8",
-      "gray-heather": "#cbd1d7",
-      "gray-heather-hover": "#9da3a8",
-      "gray-slate": "#525161",
-      "gray-slate-hover": "#464553",
-      "gray-steel": "#32313a",
-      "gray-steel-hover": "#1f1f25",
-
-      "cyan-vivid": "#05d5e1",
-      "green-success": "#d8f7dd",
-      "red-error": "#fdd",
-      "red-vivid": "#f00",
-      "yellow-soft": "#feea6e",
-      "yellow-warning": "#fff8c9",
+      "blue--primary": "#20e4ff",
+      "pink--primary": "#e33cc7"
     },
     spacing: {
       full: "100%",
@@ -68,11 +49,11 @@ module.exports = {
       104: "104px",
       120: "120px",
       144: "144px",
-      476: "476px",
+      476: "476px"
     },
-    borderColor: (theme) => ({
+    borderColor: theme => ({
       ...theme("colors"),
-      default: theme("colors['gray-heather']", "currentColor"),
+      default: theme("colors['gray-heather']", "currentColor")
     }),
 
     borderRadius: {
@@ -82,7 +63,7 @@ module.exports = {
       4: "4px",
       6: "6px",
       8: "8px",
-      16: "16px",
+      16: "16px"
     },
 
     borderWidth: {
@@ -91,14 +72,14 @@ module.exports = {
       2: "2px",
       3: "3px",
       4: "4px",
-      8: "8px",
+      8: "8px"
     },
 
     boxShadow: {
       none: "none",
       hover:
         "0 2px 4px -1px rgba(50, 80, 112, 0.2), 0 8px 10px 1px rgba(50, 80, 112, 0.14), 0 3px 14px 2px rgba(50, 80, 112, 0.12)",
-      1: "0 2px 4px -1px rgba(50, 80, 112, 0.2), 0 4px 6px 0 rgba(50, 80, 112, 0.14), 0 1px 10px 0 rgba(50, 80, 112, 0.12)",
+      1: "0 2px 4px -1px rgba(50, 80, 112, 0.2), 0 4px 6px 0 rgba(50, 80, 112, 0.14), 0 1px 10px 0 rgba(50, 80, 112, 0.12)"
     },
 
     fontSize: {
@@ -121,7 +102,7 @@ module.exports = {
       40: "40px",
       48: "48px",
       64: "64px",
-      92: "92px",
+      92: "92px"
     },
 
     fontWeight: {
@@ -133,50 +114,50 @@ module.exports = {
       600: "600",
       700: "700",
       800: "800",
-      900: "900",
+      900: "900"
     },
 
-    gradientColorStops: (theme) => ({
-      ...theme("colors"),
+    gradientColorStops: theme => ({
+      ...theme("colors")
     }),
 
-    height: (theme) => ({
+    height: theme => ({
       auto: "auto",
       ...theme("spacing"),
       full: "100%",
-      screen: "100vh",
+      screen: "100vh"
     }),
 
     margin: (theme, { negative }) => ({
       auto: "auto",
       ...theme("spacing"),
-      ...negative(theme("spacing")),
+      ...negative(theme("spacing"))
     }),
 
-    maxHeight: (theme) => ({
+    maxHeight: theme => ({
       none: "none",
       full: "100%",
       screen: "100vh",
-      ...theme("spacing"),
+      ...theme("spacing")
     }),
 
     maxWidth: (theme, { breakpoints }) => ({
       none: "none",
       full: "100%",
       ...theme("spacing"),
-      ...breakpoints(theme("screens")),
+      ...breakpoints(theme("screens"))
     }),
 
-    minHeight: (theme) => ({
+    minHeight: theme => ({
       0: "0",
       full: "100%",
-      ...theme("spacing"),
+      ...theme("spacing")
     }),
 
-    minWidth: (theme) => ({
+    minWidth: theme => ({
       0: "0",
       full: "100%",
-      ...theme("spacing"),
+      ...theme("spacing")
     }),
 
     opacity: {
@@ -193,16 +174,16 @@ module.exports = {
       65: "0.65",
       70: "0.70",
       75: "0.75",
-      100: "1",
+      100: "1"
     },
 
-    padding: (theme) => theme("spacing"),
+    padding: theme => theme("spacing"),
     space: (theme, { negative }) => ({
       ...theme("spacing"),
-      ...negative(theme("spacing")),
+      ...negative(theme("spacing"))
     }),
 
-    width: (theme) => ({
+    width: theme => ({
       auto: "auto",
       ...theme("spacing"),
       "1/2": "50%",
@@ -232,7 +213,7 @@ module.exports = {
       "10/12": "83.333333%",
       "11/12": "91.666667%",
       full: "100%",
-      screen: "100vw",
+      screen: "100vw"
     }),
 
     scale: {
@@ -247,8 +228,8 @@ module.exports = {
       110: "1.1",
       125: "1.25",
       130: "1.3",
-      150: "1.5",
-    },
+      150: "1.5"
+    }
   },
-  variants: {},
+  variants: {}
 };
