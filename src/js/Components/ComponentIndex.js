@@ -9,10 +9,12 @@
 const ComponentIndex = () => {
   // Key: value pair of element to target on the page: js component to run when element is on the page
   // Enter as strings ".component-template": "ComponentTemplate"
+
+  /**
+   * MAKE SURE TO ADD THE TEST ELEMENT TO THE PAGE OR YOU WILL SUFFER IN DEBUGGING HELL!!!!
+   */
   const asyncModules = {
     ".component-template": "ComponentTemplate",
-    "[data-fade-target]": "fade-in-out",
-    ".show-more": "show-more"
   };
   const loadModules = async () => {
     const imports = Object.entries(asyncModules);
