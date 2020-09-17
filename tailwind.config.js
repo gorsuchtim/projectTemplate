@@ -15,7 +15,10 @@ module.exports = {
       red: "#d80a07",
       green: "#027e17",
       orange: "#ffa53c",
-      teal: "#05d4e1"
+      teal: "#05d4e1",
+
+      "blue--primary": "#20e4ff",
+      "pink--primary": " #e33cc7"
     },
     spacing: {
       full: "100%",
