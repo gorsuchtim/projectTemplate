@@ -16,6 +16,7 @@ const ComponentIndex = () => {
   const asyncModules = {
     // ".test-index": "Test"
   };
+  
   const loadModules = async () => {
     const imports = Object.entries(asyncModules);
 
@@ -26,7 +27,8 @@ const ComponentIndex = () => {
 
         /** Load & initialize the module */
         const module = await import(`./${path}/${path}`);
-        if (module.default) module.default.initialize();
+        console.log(module);
+        if (module.default) module.default();
       })
     );
   };
