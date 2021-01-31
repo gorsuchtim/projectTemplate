@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "commonjs",
+    "paths": {
+      "@js/*": ["./wp-content/themes/allconnect/js/*"]
+    }
+  }
+}
