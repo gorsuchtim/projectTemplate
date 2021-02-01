@@ -1,5 +1,5 @@
 // import ComponentIndex from "./Components/ComponentIndex";
-import aliasTest from "Utilities";
+import { aliasTest } from "@js/Utilities";
 
 const App = () => {
   aliasTest();
