@@ -1,7 +1,9 @@
-import ComponentIndex from "./Components/ComponentIndex";
+// import ComponentIndex from "./Components/ComponentIndex";
+import aliasTest from "Utilities";
 
 const App = () => {
-  ComponentIndex();
+  aliasTest();
+  // ComponentIndex();
 };
 
 export default App;
