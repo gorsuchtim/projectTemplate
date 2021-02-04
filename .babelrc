@@ -10,6 +10,7 @@
           "@js": "./src/js"
         }
       }
-    ]
+    ],
+    "@babel/plugin-syntax-dynamic-import"
   ]
 }
