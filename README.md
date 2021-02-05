@@ -47,13 +47,13 @@ $ git clone (url for new project repo)
 
 5.  Follow steps 2-5 in the `Installing the project` section of this README to install and spin up the new project local environment
 
-### Project template git workflow (feature, bugfix, experiment branches)
+### Git workflow (feature, bugfix, experiment branches)
 
 This project uses [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) as a model for handling project version control. Develop is the root/main branch. Any new features or enhancements, bug fixes, or hot fixes are included into the project via branches. Branch names are prefixed by the general nature of the task (feature, bugfix, hotfix).
 
 New features or enhancements are added via `feature/` branches, bug fixes are implemented with a `bugfix/`, and any hot fix to be pushed directly to production should be preceded with `hotfix/`.
 
-#### Git workflow: creating a branch
+#### Creating a branch
 
 _Before creating a new branch be sure the local version of develop is up-to-date with the most recent remote (github/online) version of develop_
 
@@ -100,3 +100,29 @@ When creating a pull request the developer has an opportunity to use the comment
 1. The topic sentence should be a single sentence that clearly communicates the scope and purpose of the branch (what was done)
 2. Any additional information should be provided after the topic sentence in a list format (how it was done)
 3. Images are helpful! If applicable a screenshot of the project and before/after pictures do a lot to communicate what was accomplished.
+
+### How it works
+
+The project template is designed to allow a developer to easily spin up a local server that supports modern development and is live-loaded on update in the browser. It is also designed to support a certain set of code-behavior rules & best practices without enforcing a strict method of development upon every developer who handles it.
+
+#### Starting the local server
+
+```
+$ npm start
+```
+
+On running `npm start` the workflow runs the local `dev` script and builds/opens the local browser environment. The dev script runs the tailwind css scripts and sets up browser-sync for live changes in the browser when updating the files
+
+```
+$ npm run build
+```
+
+The build script prepares the development code for production.
+
+#### ESlint
+
+The first tool used when preparing development code for production is eslint.
+
+ESLint is a code analysis tool for identifying problematic patterns found in JavaScript code. Defining what is "problematic" is configurable: customized rules can be defined and loaded. ESLint covers both code quality and coding style issues.
+
+If any development code has failed to meet the standard of quality & style set in the `eslintrc` file the build will fail and the user will be pointed to where the code failed and can work toward fixing it.
