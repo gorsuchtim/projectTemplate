@@ -101,28 +101,38 @@ When creating a pull request the developer has an opportunity to use the comment
 2. Any additional information should be provided after the topic sentence in a list format (how it was done)
 3. Images are helpful! If applicable a screenshot of the project and before/after pictures do a lot to communicate what was accomplished.
 
-### How it works
+### Code rules & consistency
 
 The project template is designed to allow a developer to easily spin up a local server that supports modern development and is live-loaded on update in the browser. It is also designed to support a certain set of code-behavior rules & best practices without enforcing a strict method of development upon every developer who handles it.
 
-#### Starting the local server
+#### Format script
+
+It is important (particularly for a team) to develop projects following a set standard of code quality and style/formatting. Forcing a developer to write in a particular way, however, can create conflict and decrease productivity. It is important to allow a developer to work to the best of their ability & in their own way.
+
+To maintain consistency in production code this template uses an `npm run format` script to handle auto-formatting a developer's code via [eslint](https://github.com/gorsuchtim/projectTemplate/wiki/Eslint) and Prettier.
+
+The format script can be run at the developer's discretion to validate code in development and it is also run in the build process when preparing code for production.
 
 ```
-$ npm start
+$ npm run format
 ```
 
-On running `npm start` the workflow runs the local `dev` script and builds/opens the local browser environment. The dev script runs the tailwind css scripts and sets up browser-sync for live changes in the browser when updating the files
+#### Build script
+
+The build script prepares the development/branch code for production by ensuring it has passed linting & formatting requirements and outputting the code into production files. If any code does not pass the requirements outlined by the template (or updated by the team) the build will fail.
 
 ```
 $ npm run build
 ```
 
-The build script prepares the development code for production.
-
 #### ESlint
-
-The first tool used when preparing development code for production is eslint.
 
 ESLint is a code analysis tool for identifying problematic patterns found in JavaScript code. Defining what is "problematic" is configurable: customized rules can be defined and loaded. ESLint covers both code quality and coding style issues.
 
 If any development code has failed to meet the standard of quality & style set in the `eslintrc` file the build will fail and the user will be pointed to where the code failed and can work toward fixing it.
+
+#### Prettier
+
+Prettier is an opinionated code formatter. It enforces a consistent style by parsing code and re-printing it with its own rules (ex: line length, indent spacing, single or double quotes).
+
+Prettier is available as an extension in editors but the formatting that is preferred among developers can vary greatly. Because of this, the overall consistency of code for production can suffer. This template does not enforce the use of prettier OR a certain set of prettier rules in development but DOES format the code via Prettier by a defined set of rules when preparing it for production.
