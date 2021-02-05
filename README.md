@@ -151,13 +151,15 @@ Additionally, tailwind automatically removes all unused CSS when building for pr
 
 #### How to use tailwind
 
-Tailwind is used on the html elements. The utility classes are added as any other classnames would be used (and can be used w/ react in `classname="` as well). There are pre-defined values as well as customized values set in this template in the `tailwind.config.js` file.
+Tailwind is used on html elements. The utility classes are added as any other class names would be used (and can be used w/ react in `classname="`). There are pre-defined values and customized classes and values can be defined in this template in the `tailwind.config.js` file.
+
+A full guide to optimizing the `tailwind.config.js` file for the project can be found [here](https://tailwindcss.com/docs/configuration)
 
 An example of using tailwind on a containing `<section>` element & its nested heading. This example shows how responsive styles can be used to manipulate a utility class value as well as how a pseudo class can be used.
 
 A good practice when writing classes in this way is to double-space between categorical utility classes.
 
-The full list of maintained tailwind docs can be found here
+The full list of maintained tailwind docs can be found [here](https://tailwindcss.com/docs)
 
 ```
 <section class="bg-blue  flex flex-col justify-center items-center">
