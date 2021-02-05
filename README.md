@@ -136,3 +136,23 @@ If any development code has failed to meet the standard of quality & style set i
 Prettier is an opinionated code formatter. It enforces a consistent style by parsing code and re-printing it with its own rules (ex: line length, indent spacing, single or double quotes).
 
 Prettier is available as an extension in editors but the formatting that is preferred among developers can vary greatly. Because of this, the overall consistency of code for production can suffer. This template does not enforce the use of prettier OR a certain set of prettier rules in development but DOES format the code via Prettier by a defined set of rules when preparing it for production.
+
+### Tailwind
+
+Adam Wathan - the creator of [Tailwind](https://tailwindcss.com/) - describes it this way... "I’ve written a few thousand words on why traditional “semantic class names” are the reason CSS is hard to maintain, but the truth is you’re never going to believe me until you actually try it. If you can suppress the urge to retch long enough to give it a chance, I really think you'll wonder how you ever worked with CSS any other way."
+
+Tailwind is a set list of utility functions that you can apply directly to the html elements (instead of creating scss partials or dedicated stylesheets). Out of the box tailwind has a plethora of utility classes & values and those can easily be added/updated in the `tailwind.config` file to match the project's required values.
+
+Tailwind has [extensive, easy-to-follow documentation](https://tailwindcss.com/docs)
+
+Tailwind is responsive and mobile-first. Styles are set with mobile in mind and additional breakpoint styles for tablet/desktop and their widths can be defined in `tailwind.config` and styles can be set on html elements based on those widths by prefixing the utility with `md:` or `lg:`
+
+Additionally, tailwind automatically removes all unused CSS when building for production, which means the final CSS bundle is the smallest it could possibly be. Most Tailwind projects ship less than 10KB of CSS to the client.
+
+#### How to use tailwind
+
+TODO: write up how to use it
+
+#### How to update tailwind configuration file
+
+TODO: write up how to use config file
