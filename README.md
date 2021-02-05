@@ -151,8 +151,18 @@ Additionally, tailwind automatically removes all unused CSS when building for pr
 
 #### How to use tailwind
 
-TODO: write up how to use it
+Tailwind is used on the html elements. The utility classes are added as any other classnames would be used (and can be used w/ react in `classname="` as well). There are pre-defined values as well as customized values set in this template in the `tailwind.config.js` file.
 
-#### How to update tailwind configuration file
+An example of using tailwind on a containing `<section>` element & its nested heading. This example shows how responsive styles can be used to manipulate a utility class value as well as how a pseudo class can be used.
 
-TODO: write up how to use config file
+A good practice when writing classes in this way is to double-space between categorical utility classes.
+
+The full list of maintained tailwind docs can be found here
+
+```
+<section class="bg-blue  flex flex-col justify-center items-center">
+    <h1 class="headline  text-white text-14 md:text-16 lg:text-24  hover:text-green">
+        Ello Whirled
+    </h1>
+</section>
+```
