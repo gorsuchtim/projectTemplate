@@ -1,3 +1,6 @@
+TODO:
+Section about the package json: what is behind the scenes and why particularly with eslint to maintain team rules, prettier to maintain team formatting without enforcing certain in-development practices, and an explanation of tailwind
+
 # Project Template
 
 ## What it is
