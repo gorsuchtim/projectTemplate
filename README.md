@@ -14,7 +14,9 @@ A static workflow template for creating a one-off project or larger scale applic
 1. Clone this repo to your local environment
 
 ```
+
 $ git clone https://github.com/gorsuchtim/projectTemplate
+
 ```
 
 2. Change directories into your new project folder
@@ -22,13 +24,17 @@ $ git clone https://github.com/gorsuchtim/projectTemplate
 3. Install the npm packages
 
 ```
+
 $ npm install
+
 ```
 
 4. Open/run your local environment
 
 ```
+
 $ npm start
+
 ```
 
 ### Creating a new project for this template
@@ -76,12 +82,27 @@ $ git checkout -b feature/PT-001_updates-readme-content
 
 3. **Branch commit practices**
    To help streamline the pull request/review process AND as a manner of keeping branches clean a great practice to follow is to regularly commit branch code with brief, semantic commit messages. A good rule of thumb is to split the overall tasks into sections of completion, work toward a particular goal (even if it's a minor change), commit, and then move to the next section/goal of completing the task for that branch.
+
+   ```
+
+   $ git commit -m "updates name handler to use lower case"
+
+   ```
+
 4. **Branch commit messages**
-   To keep commit messages short & semantic consider beginning each message with a verb to describe what was completed for this commit. For example "updates readme with commit practices" or "commits initial files". Following this practice will also help in keeping commits separate and clean.
+   To keep commit messages short & semantic consider beginning each message with a verb to describe what was completed for this commit.
+
+   ```
+
+   $ git commit -m "updates readme with commit practices"
+
+   ```
+
+   _Following this practice will also help keep commits separate and clean._
 
 #### Pull requests & code reviews
 
-**_The projectTemplate repository settings are pre-defined to require approval from at least 1 other developer before a new branch can be merged into the develop branch. This can be updated to require more/less reviews in the remote repository in Settings -> Branches -> Branch Protection Rules_**
+The projectTemplate repository settings are pre-defined to require approval from at least 1 other developer before a new branch can be merged into the develop branch. This can be updated to require more/less reviews in the remote repository in Settings -> Branches -> Branch Protection Rules.
 
 When a branch's code is complete it should be reviewed by the team with a pull request before attempting to merge into develop. A pull request is more than a formality. It is an opportunity to ensure new code adheres to team guidelines & best practices, is error-free, and has no conflicts with other projects. It is also an open forum for discussion; an opportunity for a reviewer to ask "why" or "how" and to spark a conversation about the code.
 
