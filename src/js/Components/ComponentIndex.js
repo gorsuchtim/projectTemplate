@@ -14,9 +14,9 @@ const ComponentIndex = () => {
    * MAKE SURE TO ADD THE TEST ELEMENT TO THE PAGE OR YOU WILL SUFFER IN DEBUGGING HELL!!!!
    */
   const asyncModules = {
-    // ".test-index": "Test"
+    ".test-index": "Test"
   };
-  
+
   const loadModules = async () => {
     const imports = Object.entries(asyncModules);
 
