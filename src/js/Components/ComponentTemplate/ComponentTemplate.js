@@ -6,7 +6,7 @@
 
 export default (() => {
   const handleTemplate = () => {
-    console.log("Im the component template");
+    console.log("Itsa me the template element!"); // eslint-disable-line no-console
   };
   const initialize = () => {
     handleTemplate();
