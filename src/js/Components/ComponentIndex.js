@@ -1,22 +1,23 @@
 /**
- * @desc This function runs on page load and iterates through the key:value pairs in asyncModules
- * It looks for an element on the page with an attribute that matches the key and loads & runs the JS file associated to that element
- * @param // const asyncModules accepts the key:value pair as str.  Ex: ".myClassName": "myFileToRun"
- * The associated file must be in /src/js/Components
- * and must have a folder named the same as the file.  Ex: /Components/ComponentTemplate/ComponentTemplate.js
+ *  loadModules() iterates through the key:value pairs in const asyncModules
+ *  It defines the selector to look for on the page (const target) and
+ *  Defines the path to the module to initialize when the page loads if that selector exists on the page
+ *
+ *  const asyncModules accepts the key:value pair as str.  Ex: ".myClassName": "myFileToRunIsMyClassNameIsOnThePage"
+ *  The associated file must be in /src/js/Components
+ *  the file must be nested within a folder with a matching name Ex: /Components/ComponentTemplate/ComponentTemplate.js
+ *
+ *  This can be changed in the const module = await import(`./${path}/${path}`); directive below
+ *
+ * BUG ALERT: I don't yet know why but sometimes if (module.default) module.default() errs out and I have to change it
+ * to module.default.initialize(); to make it work.  I don't know - I don't get it.
  *
  */
 const ComponentIndex = () => {
-  // Key: value pair of element to target on the page: js component to run when element is on the page
-  // Enter as strings ".component-template": "ComponentTemplate"
-
-  /**
-   * MAKE SURE TO ADD THE TEST ELEMENT TO THE PAGE OR YOU WILL SUFFER IN DEBUGGING HELL!!!!
-   */
   const asyncModules = {
-    // ".test-index": "Test"
+    // ".test": "Test"
   };
-  
+
   const loadModules = async () => {
     const imports = Object.entries(asyncModules);
 
@@ -27,7 +28,6 @@ const ComponentIndex = () => {
 
         /** Load & initialize the module */
         const module = await import(`./${path}/${path}`);
-        console.log(module);
         if (module.default) module.default();
       })
     );
