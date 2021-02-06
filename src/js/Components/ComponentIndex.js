@@ -9,9 +9,6 @@
  *
  *  This can be changed in the const module = await import(`./${path}/${path}`); directive below
  *
- * BUG ALERT: I don't yet know why but sometimes if (module.default) module.default() errs out and I have to change it
- * to module.default.initialize(); to make it work.  I don't know - I don't get it.
- *
  */
 const ComponentIndex = () => {
   const asyncModules = {
@@ -28,7 +25,7 @@ const ComponentIndex = () => {
 
         /** Load & initialize the module */
         const module = await import(`./${path}/${path}`);
-        if (module.default) module.default();
+        if (module.default) module.default.initialize();
       })
     );
   };
