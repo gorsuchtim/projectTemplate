@@ -9,16 +9,13 @@
  *
  *  This can be changed in the const module = await import(`./${path}/${path}`); directive below
  *
+ * BUG ALERT: I don't yet know why but sometimes if (module.default) module.default() errs out and I have to change it
+ * to module.default.initialize(); to make it work.  I don't know - I don't get it.
+ *
  */
 const ComponentIndex = () => {
-  // Key: value pair of element to target on the page: js component to run when element is on the page
-  // Enter as strings ".component-template": "ComponentTemplate"
-
-  /**
-   * MAKE SURE TO ADD THE TEST ELEMENT TO THE PAGE OR YOU WILL SUFFER IN DEBUGGING HELL!!!!
-   */
   const asyncModules = {
-    ".test-index": "Test"
+    // ".test": "Test"
   };
 
   const loadModules = async () => {
@@ -31,7 +28,7 @@ const ComponentIndex = () => {
 
         /** Load & initialize the module */
         const module = await import(`./${path}/${path}`);
-        if (module.default) module.default.initialize();
+        if (module.default) module.default();
       })
     );
   };
