@@ -4,6 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Local Env</title>
+
+    <style>
+      /* Load Critical Styles */
+      .hero {
+        height: 100vh;
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+
+    <!-- This is the code to load the block.scss file that is compiled to block.css by webpack -->
+    <!-- <link
+      rel="preload"
+      href="defer.index-components.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="defer.index-components.css" />
+    </noscript> -->
   </head>
   <body class="bg-blue--primary">
     <!-- Placeholder content -->
